@@ -6,4 +6,4 @@ Run this app
 	node app.js
 	
 
-Learn step by step from toutoril [nswbmw's N-blog](https://github.com/nswbmw/N-blog)
+Learn step by step from tutorial [nswbmw's N-blog](https://github.com/nswbmw/N-blog)
