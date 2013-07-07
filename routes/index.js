@@ -7,9 +7,14 @@ var crypto = require('crypto'),
 	Post = require('../models/post.js'),
 	Comment = require('../models/comment.js');
 
+var pageSize = 5; // 每页显示文章数
+
 module.exports = function(app){
 	app.get('/',function(req, res){
-		Post.getAll(null, function(err, posts){
+		// 判断是否是第一页，并把请求的页数转换成 number 类型
+		var page = req.query.p?parseInt(req.query.p):1;
+		// 查询并返回第 page 页的 pageSize 篇文章
+		Post.getPage(null, page, function(err, posts, total){
 			if (err){
 				posts = [];
 			}
@@ -17,6 +22,9 @@ module.exports = function(app){
 	  			title: '彼女の記事　咲',
 	  		  	user: req.session.user,
 				posts: posts,
+				page: page,
+				isFirstPage: (page -1)==0,
+				isLastPage: ((page-1)*pageSize+posts.length)==total,
 	  		  	success: req.flash('success').toString(),
 	  		  	error: req.flash('error').toString()
 	  	  	});
@@ -139,6 +147,7 @@ module.exports = function(app){
 	});
 	
 	app.get('/u/:name', function(req, res){
+		var page = req.query.p?parseInt(req.query.p):1;
 		//检查用户名是否存在
 		User.get(req.params.name, function(err, user){
 			if (!user){
@@ -146,8 +155,8 @@ module.exports = function(app){
 				return res.redirect('/');
 			}
 			
-			//查询并返回该用户的所有文章
-			Post.getAll(user.name, function(err, posts){
+			//查询并返回该用户的第 page 页 pageSize 篇文章
+			Post.getPage(user.name, page, function(err, posts, total){
 				if (err) {
 					req.flash('error', err);
 					return res.redirect('/');
@@ -155,6 +164,9 @@ module.exports = function(app){
 				res.render('user', {
 					title: user.name,
 					posts: posts,
+					page: page,
+					isFirstPage: (page-1)==0,
+					isLastPage: ((page-1)*pageSize + posts.length)==total,
 					user : req.session.user,
 					success: req.flash('success').toString(),
 					error: req.flash('error').toString()
