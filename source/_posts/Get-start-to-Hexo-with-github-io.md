@@ -4,7 +4,7 @@ date: 2016-02-24 16:57:04
 tags: hexo
 ---
 
-#起步
+# 起步
 
 - 预备好Node.js，npm环境，安装hexo。
 - 新建文件夹，`hexo init <folder>`
