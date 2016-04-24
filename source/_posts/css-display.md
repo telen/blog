@@ -80,6 +80,10 @@ div {
 
 参见 flex 相关介绍。
 
+![flex-spec](css-display/flex-spec.png)
+
+
+
 # Grid
 
 Grid 布局也是通过 display 属性初始化的。
