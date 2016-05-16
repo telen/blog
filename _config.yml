@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: telen的网络日志
+title: System log of telen
 subtitle:
-description:
+description: telen personal blog
 author: telen_lee
 language: en,zh
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true 
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
