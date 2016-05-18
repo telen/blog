@@ -81,7 +81,7 @@ div {
 
 参见 flex 相关介绍。
 
-![flex-spec]({{site.baseurl}}/img/post/2016-04-24-flex-spec.png)
+![flex-spec]({{site.github.url}}/img/post/2016-04-24-flex-spec.png)
 
 
 

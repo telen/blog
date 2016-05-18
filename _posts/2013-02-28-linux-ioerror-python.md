@@ -16,7 +16,7 @@ tags:
 
 文件读取错误
 
-![io error]({{site.baseurl}}/img/post/2013-02-28-bgioerror.png)
+![io error]({{site.github.url}}/img/post/2013-02-28-bgioerror.png)
 
 > *enviroment python 3.2*
 
