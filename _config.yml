@@ -1,0 +1,37 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Telen's Blog
+
+description: > # this means to ignore newlines until "baseurl:"
+    I am LiHongfei, trying to be a front-end engineer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://telen.github.io" # the base hostname & protocol for your site
+filePath: "/img/"
+
+static_files:
+  path: "assets"
+
+paginate: 5
+paginate_path: "/page:num"
+
+twitter_username: telen_lee
+github_username: telen
+
+timezone: Asia/Shanghai
+
+# Build settings
+markdown: kramdown
+
+gems: [jekyll-paginate]
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+
