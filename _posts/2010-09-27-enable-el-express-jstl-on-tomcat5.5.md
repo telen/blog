@@ -3,6 +3,7 @@ layout: post
 title:  "el表达式 jstl 本地tld配置 环境tomcat5.5"
 date:   2010-09-27 21:55:32 +0800
 categories: JSP Java SUN Web XML
+excerpt: EL表达式的配置和使用
 ---
 
 ### 一、启用EL表达式
