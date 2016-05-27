@@ -12,4 +12,4 @@ Live Location 就是给出了这样一种展示方式，以全国范围内视角
 
 ![live locate demo](http://telen.github.io/livelocate/screenshot.png)
 
-Visit [online](http://telen.github.io/livelocate/)
+Visit [Demo](http://telen.github.io/livelocate/)
