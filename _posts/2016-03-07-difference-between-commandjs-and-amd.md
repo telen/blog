@@ -3,6 +3,7 @@ layout: post
 title: Difference between CommonJS and AMD
 date: 2016-03-07 15:08:38
 tags: javascript
+excerpt: Major difference between CMD and AMD
 ---
 
 > Answered by [jakee](http://stackoverflow.com/users/1448860/jakee) from [http://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs](http://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs)
@@ -57,4 +58,3 @@ Hope this helped to clarify things!
 Node.js 实现了CommonJS，但不适用于浏览器端；AMD借鉴了CommonJS，RequireJS实现了AMD，适用于浏览器。
 
 另外一点，RequireJS还提供了一种CommonJS wrapper，所以CommonJS也可以很方便地被RequireJS引入。
-
