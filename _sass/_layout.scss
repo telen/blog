@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    border-top: 5px solid $color-primary-0;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -239,4 +239,41 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+ * pagination
+ */
+
+.pagination {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+
+  a {
+    color: $color-primary-1;
+    text-decoration: none;
+  }
+  a.previous, a.next {
+    border-radius: 4px;
+    background-color: $color-primary-3;
+    padding: 2px 4px;
+    box-shadow: 1px 2px $color-primary-1;
+
+    &:hover {
+      color: $color-secondary-2-1;
+    }
+
+    &:active {
+      position: relative;
+      box-shadow: none;
+      top: 2px;
+    }
+  }
+  span.previous, span.next {
+    color: lighten($color-primary-2, 20%);
+    border-radius: 4px;
+    background-color: $color-primary-2;
+    padding: 2px 4px;
+  }
 }
