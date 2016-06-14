@@ -5,6 +5,17 @@ var uglify = require('gulp-uglify');
 var gutil = require('gulp-util');
 var child = require('child_process');
 var browserSync = require('browser-sync').create();
+var combiner = require('stream-combiner2');
+
+var handleError = function (err) {
+    var colors = gutil.colors;
+    console.log('\n');
+    gutil.log(colors.red('Error!'));
+    gutil.log('fileName: ' + colors.red(err.fileName));
+    gutil.log('lineNumber: ' + colors.red(err.lineNumber));
+    gutil.log('message: ' + err.message);
+    gutil.log('plugin: ' + colors.yellow(err.plugin));
+};
 
 gulp.task('sass', () => {
     return gulp.src('_sass/main.scss')
@@ -47,6 +58,3 @@ gulp.task('serve', () => {
 
 
 gulp.task('default', ['sass', 'jekyll', 'serve']);
-
-
-
