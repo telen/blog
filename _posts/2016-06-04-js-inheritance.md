@@ -165,7 +165,8 @@ myCat.get_name = function() {
 4. **返回那个新对象**。
 
 伪代码
-```
+
+```js
 var constructor = function(spec, my) {
 	var that, 其他私有实例变量;
 	my = my || {};
@@ -187,12 +188,13 @@ var constructor = function(spec, my) {
 
 扩充`that`，我们可以分配一个新函数成为`that`的成员方法。或者，更安全地，我们可以先吧函数定义为私有方法，然后再把他们分配给`that`：
 
-```
+```js
 var methodical = function() {
 ...
 };
 that.methodical = methodical;
 ```
+
 这样分两步的好处是，如果其他方法要用`methodical`，它们可以直接调用`methodical()`而不是`that.methodical()`。如果该实例被破坏或篡改，甚至`that.methodical`被替换掉了，调用`methodical`的方法同样会继续工作，因为它们私有的`methodical`不收该实例被修改的影响。
 
 {% highlight javascript %}
